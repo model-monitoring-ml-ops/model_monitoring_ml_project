@@ -1,0 +1,19 @@
+name: model_monitoring_ml_project
+on:
+  push:
+    branches: [ dev ]
+jobs:
+  run:
+    runs-on: [ubuntu-latest]
+    container: docker://dvcorg/cml-py3:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: cml_run
+        run: |
+          # Your ML workflow goes here
+          pip install -r requirements.txt
+          python train.py
+          
+          echo "## Model metrics"
+          cat metrics.txt
+         
