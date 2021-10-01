@@ -1,7 +1,7 @@
 name: model_monitoring_ml_project
 on:
   push:
-    branches: [ dev ]
+    branches: [ master ]
 jobs:
   run:
     runs-on: [ubuntu-latest]
