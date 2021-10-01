@@ -1,0 +1,8 @@
+git init
+git remote add origin https://github.com/model-monitoring-ml-ops/model_monitoring_ml_project.git
+git pull
+git status
+git add .
+git commit -m "initial commit"
+git push origin master
+git push -f origin master --to force overwrite with local version
